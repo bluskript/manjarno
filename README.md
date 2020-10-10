@@ -27,9 +27,11 @@ way Manjaro can be stable is by literally forking all the Arch related
 repositories including the AUR and keeping them in sync.
 
 ## Official Statement
-Manjaro came out with an official statement that stated that it is the user's fault for having faulty updates[2]. They claim the following:
+Manjaro came out with an official statement that stated that it is the user's fault for having faulty updates [2]. They claim the following:
 > When you’re updating your system and you have an issue with any installed package installed - your immediate thought is - the update is at Manjaro fault.
+
 > No - it is not - you are
+
 > While Manjaro provides the updates the result is yours.
 
 This post was problematic for quite a few reasons:
