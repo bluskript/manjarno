@@ -26,11 +26,22 @@ Manjaro, it will break because Manjaro holds back packages. So the only
 way Manjaro can be stable is by literally forking all the Arch related
 repositories including the AUR and keeping them in sync.
 
+## Official Statement
+Manjaro came out with an official statement that stated that it is the user's fault for having faulty updates[2]. They claim the following:
+> When you’re updating your system and you have an issue with any installed package installed - your immediate thought is - the update is at Manjaro fault.
+> No - it is not - you are
+> While Manjaro provides the updates the result is yours.
+
+This post was problematic for quite a few reasons:
+1. It blames YOU, the USER, for the update breaking your system.
+2. Manjaro is an entry-level distro, and a simple task like updating shouldn't require you to `chroot` and have to fix the machine
+3. Manjaro is based off of Arch, which is much less of a problem to update
+
 # Security
 Manjaro is not really a secure distro.
 
 Their own updater had a security vulnerability which wasn't fixed
-until recently [2]. This is actually a core package, not an extra or
+until recently [3]. This is actually a core package, not an extra or
 community package. To quote the list,
 
 > I have discovered an issue with one of your core Manjaro packages,
@@ -41,7 +52,7 @@ community package. To quote the list,
 The amount of attacks that can be done due to the vulnerability is a
 lot!
 
-The Manjaro updater [3] does all the bad practices that one could do in
+The Manjaro updater [4] does all the bad practices that one could do in
 a general Linux system and Arch Linux system specifically. Each time
 the system updates, they reinstall some packages to "fix" issues and
 they use the `--no-confirm` flag (force) everytime they do so and
@@ -49,7 +60,7 @@ various other odd sequence of commands which are just as bad, if not
 more.
 
 In an update, password less updates in pamac (Manjaro's AUR helper)
-were sneaked in and from the look in the issue [4] made concerning this,
+were sneaked in and from the look in the issue [5] made concerning this,
 the change was made to look like a "feature". This is a major security
 issue considering that packages in AUR are not checked by Arch Linux
 maintainers (and Manjaro does not maintain its own either). Some AUR
@@ -58,22 +69,24 @@ user (Manjaro's target demographic are not really power users) installing
 a harmless-looking AUR package that could potentially mess their system!
 
 # SSL Certificates
-Manjaro let their SSL certificates expire not once but twice [5]!
+Manjaro let their SSL certificates expire not once but twice [6]!
 The first time, they asked the users to use a private window and/or change
-the system time [6].
-The second time when the SSL certificates expired, they did the same [7].
+the system time [7].
+The second time when the SSL certificates expired, they did the same [8].
 
 # Links
 [1] https://wiki.manjaro.org/index.php?title=Manjaro:_A_Different_Kind_of_Beast
 
-[2] https://lists.manjaro.org/pipermail/manjaro-security/2018-August/000785.html
+[2] https://web.archive.org/web/20201008153014/https://forum.manjaro.org/t/what-is-wrong-i-am-not-to-blame/30565
 
-[3] https://gitlab.manjaro.org/packages/core/manjaro-system/blob/master/manjaro-update-system.sh#L34
+[3] https://lists.manjaro.org/pipermail/manjaro-security/2018-August/000785.html
 
-[4] https://gitlab.manjaro.org/applications/pamac/issues/719
+[4] https://gitlab.manjaro.org/packages/core/manjaro-system/blob/master/manjaro-update-system.sh#L34
 
-[5] https://www.reddit.com/r/linux/comments/4inrut/manjaros_ssl_certificate_expired_again/
+[5] https://gitlab.manjaro.org/applications/pamac/issues/719
 
-[6] https://web.archive.org/web/20150409112614/https://manjaro.github.io/
+[6] https://www.reddit.com/r/linux/comments/4inrut/manjaros_ssl_certificate_expired_again/
 
-[7] https://web.archive.org/web/20160512210401/https://manjaro.github.io/
+[7] https://web.archive.org/web/20150409112614/https://manjaro.github.io/
+
+[8] https://web.archive.org/web/20160512210401/https://manjaro.github.io/
